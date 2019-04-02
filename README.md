@@ -1,3 +1,21 @@
+# snx_rtsp_server
+
+Customised version of the RTSP server for use with Xiaofang cameras. This adds
+the following functionality:
+
+* Username/password authentication on RTSP feeds
+* Tested and working with 1920x1080 resolution
+
+## Building
+
+TODO
+
+## Installation
+
+TODO
+
+## Original README
+
 ### About snx_rtsp_server ###
 
 snx_rtsp_server is a small rtsp streaming server developed base on live555 library. snx_rtsp_server supports,
