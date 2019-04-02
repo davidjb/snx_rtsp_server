@@ -14,18 +14,34 @@ ARM CPU.
 
 ## Building
 
+You'll need a copy of the Sonix SDK and then need to follow the setup
+instructions at
+https://github.com/davidjb/fang-hacks/blob/master/INSTALL.md#sdk (stopping
+just before the full `make` command, which attempts to build _everything_).
+
+At this point, follow details at
+https://github.com/davidjb/fang-hacks/blob/master/INSTALL.md#updating-rtsp-server
+
 If you just want to trust some random compiled code you've found online, then
 step this way into my
 [fang-hacks](https://github.com/davidjb/fang-hacks/tree/master/updates)
 repository.  I don't make a habit of distributing spyware but if you're
 downloading and running the code there, you're completely trusting me.
 
-TODO
-
-
 ## Installation
 
-TODO
+1. Build the project as above
+1. Copy the resulting `snx_rtsp_server` executable and all
+   shared library objects (`snx_sdk/middleware/_install/lib/*`) to your camera
+1. Try executing the server with a custom `LD_LIBRARY_PATH`:
+
+       LD_LIBRARY_PATH=/media/mmcblk0p2/path/to/lib /path/to/snx_rtsp_server -A user:pass
+
+   This should succeed and start the RTSP server.
+1. Adjust the script in which the RTSP server runs as a service (typically
+   `/media/mmcblk0p2/data/etc/scripts/20-rtsp-server`) and change the calls to
+   `snx_rtsp_server` to point to your custom version, ensuring you set the
+   `LD_LIBRARY_PATH` environment variable or you'll get a segfault
 
 ## Original README
 
