@@ -86,7 +86,7 @@ void addSession(RTSPServer* rtspServer, const char* sessionName, ServerMediaSubs
 
 	char* url = rtspServer->rtspURL(sms);
 
-	fprintf(stderr, "lay this stream using the URL: \"%s\"\n", url );
+	fprintf(stderr, "Play this stream using the URL: \"%s\"\n", url );
 
 	delete[] url;			
 }
@@ -352,7 +352,7 @@ int main(int argc, char** argv)
 	//bool useMmap = true;
 	std::string url = "unicast";
 	std::string murl = "multicast";
-    std::string userpass, user, pass;
+        std::string userpass, user, pass;
 	bool useThread = true;
 	in_addr_t maddr = INADDR_NONE;
 	bool audio_en = false;
