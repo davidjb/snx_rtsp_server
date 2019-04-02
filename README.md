@@ -6,9 +6,22 @@ the following functionality:
 * Username/password authentication on RTSP feeds
 * Tested and working with 1920x1080 resolution
 
+There are lots of this code floating around the Internet and in different
+forms of executables and source code repositories but this is confirmed to
+work, at least on the Xiaofang devices with `fang-hacks` installed and with an
+ARM CPU.
+
+
 ## Building
 
+If you just want to trust some random compiled code you've found online, then
+step this way into my
+[fang-hacks](https://github.com/davidjb/fang-hacks/tree/master/updates)
+repository.  I don't make a habit of distributing spyware but if you're
+downloading and running the code there, you're completely trusting me.
+
 TODO
+
 
 ## Installation
 
